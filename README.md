@@ -24,6 +24,44 @@ convertSelector( 'name1 name2', 'class' );
 
 convertSelector( 'name1 name2' );
 //'.name.name2'
+
+convertSelector( 'name1 > name2' );
+//'.name .name2'
+
+convertSelector( 'name1 > name2' );
+//'.name .name2'
+
+var data = [
+  {name: 'name1', type: 'id'},
+  {name: 'name2', type: 'id'},
+];
+convertSelector( data );
+//'#name1#name2'
+
+var data = [
+  {name: 'name1', type: 'id'},
+  {name: 'name2', type: 'class'},
+];
+convertSelector( data );
+//'#name1.name2'
+
+var data = [
+  {name: 'name1', type: 'id'},
+  '>',
+  {name: 'name2', type: 'class'},
+];
+convertSelector( data );
+//'#name1 .name2'
+
+convertSelector( [ 'name1', '>', 'name2' ] )
+//'.name1 .name2'
+
+convertSelector( {name: 'name1', type: 'id'} )
+//'#name1';
+
+convertSelector( {name: 'name1', type: 'class'} )
+//'.name1';
+
 ```
 
 ## API
