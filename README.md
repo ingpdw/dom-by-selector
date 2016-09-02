@@ -1,83 +1,43 @@
-# convert-selector
+# dom-by-selector
 
-convert string to selector
+this is little function to convert selector String to the DOM
 
 ## Install
 
 ```
-$npm install convert-selector
+$npm install dom-by-selector
 ```
 
 ## Usage
 
 ```
-var convertSelector = require( 'convert-selector' );
+var domBySelector = require( 'dom-by-selector' );
 
-convertSelector( 'name', 'id' );
-//#name
+domBySelector( '#myId' );
+//<div id="myId"></div>
 
-convertSelector( 'name', 'class' );
-//.name
+domBySelector( '.myClass' );
+//<div class="myClass"></div>
 
-convertSelector( 'name1 name2', 'class' );
-//'.name.name2'
+domBySelector( '.myClass1 .myClass2' );
+//<div class="myClass1 myClass2"></div>
 
-convertSelector( 'name1 name2' );
-//'.name.name2'
+domBySelector( '.myClass1 .myClass2 #myId' );
+//<div id="myId" class="myClass1 myClass2"></div>
 
-convertSelector( 'name1 > name2' );
-//'.name .name2'
-
-convertSelector( 'name1 > name2' );
-//'.name .name2'
-
-var data = [
-  {name: 'name1', type: 'id'},
-  {name: 'name2', type: 'id'},
-];
-convertSelector( data );
-//'#name1#name2'
-
-var data = [
-  {name: 'name1', type: 'id'},
-  {name: 'name2', type: 'class'},
-];
-convertSelector( data );
-//'#name1.name2'
-
-var data = [
-  {name: 'name1', type: 'id'},
-  '>',
-  {name: 'name2', type: 'class'},
-];
-convertSelector( data );
-//'#name1 .name2'
-
-convertSelector( [ 'name1', '>', 'name2' ] )
-//'.name1 .name2'
-
-convertSelector( {name: 'name1', type: 'id'} )
-//'#name1';
-
-convertSelector( {name: 'name1', type: 'class'} )
-//'.name1';
-
+domBySelector( '.myClass1', 'p' );
+//<p class="myClass1"></p>
 ```
 
 ## API
 
 ```
-var convertSelector = require( 'convert-selector' );
-
+var domBySelector = require( 'dom-by-selector' );
 ```
 
 ## build
 * npm install babel -g
 * npm run compile
-
-## Test
-* npm install mocha -g
-* npm test
 
 ## License
 © 2016 ingpdw. MIT License

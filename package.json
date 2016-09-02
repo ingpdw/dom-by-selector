@@ -1,7 +1,7 @@
 {
-  "name": "convert-selector",
-  "version": "0.6.0",
-  "description": "convert string to selector",
+  "name": "dom-by-selector",
+  "version": "1.1.5",
+  "description": "this is little function to convert selector String to the Dom.",
   "scripts": {
     "test": "mocha test",
     "compile": "babel -d lib/ src/",
@@ -12,7 +12,7 @@
     "name": "ingpdw",
     "email": "ingpdw@gmail.com"
   },
-  "repository": "https://github.com/ingpdw/convert-selector",
+  "repository": "https://github.com/ingpdw/dom-by-selector",
   "license": "MIT",
   "dependencies": {}
 }

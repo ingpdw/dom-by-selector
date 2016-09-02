@@ -1,1 +1,1 @@
-exports = module.exports = require( './lib/convert-selector.js' );
+exports = module.exports = require( './lib/dom-by-selector.js' );
