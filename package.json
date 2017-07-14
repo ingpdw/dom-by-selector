@@ -1,6 +1,6 @@
 {
   "name": "dom-by-selector",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "this is little function to convert selector String to the Dom.",
   "scripts": {
     "test": "mocha test",
